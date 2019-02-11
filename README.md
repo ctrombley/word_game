@@ -6,15 +6,15 @@ To solve this problem, you'll need to implement `Solver#solve` in `lib/solver.rb
 
 Two dependencies have been provided to instances of the `Solver` class, an instance of `Board` and an instance of `Dictionary`.  
 
-### Bonus
-Once the main problem has been solved, we can also consider the performance of the solution.  One area for consideration is the provided implementation for dictionary lookup - it is not very fast.  When calling `Dictionary#word?`, a [linear search](https://www.studytonight.com/data-structures/linear-search-algorithm) is performed on an array.  Implement a more efficient method for performing dictionary lookups, and benchmark your results.
-
 ### Example
 Given the following board:
 
 ![board](https://github.com/ctrombley/word_game/raw/master/board.png)
 
 The words GEEKS and QUIZ can be found by traversing the cells in the board.  Your program should be able to find these words in the board and output them in a list before the program completes.
+
+### Bonus
+Once the main problem has been solved, we can also consider the performance of the solution.  One area for consideration is the provided implementation for dictionary lookup - it is not very fast.  When calling `Dictionary#word?`, a [linear search](https://www.studytonight.com/data-structures/linear-search-algorithm) is performed on an array.  Implement a more efficient method for performing dictionary lookups, and benchmark your results.
 
 ## Running the code
 ```ruby
