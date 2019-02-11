@@ -22,7 +22,7 @@ Once the main problem has been solved, we can also consider the performance of t
 
 ## Running the code
 ```ruby
-ruby boggle.rb --width 3 --height 3
+ruby word_game.rb --width 3 --height 3
 ```
 
 Running the above code will generate a randomized board of specified width and height and then run the solution on that board.  The words found will be output to the command line.  Once the solver implementation is completed, this output should be a complete list of all the words found in the given board.
