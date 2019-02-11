@@ -7,6 +7,8 @@ class Board
   DEFAULT_HEIGHT = 5
   LETTERS = ('A'..'Z').to_a
 
+  attr_accessor :width, :height
+
   ##
   # Creates a new board of size `width` and `height`.
 

@@ -12,9 +12,11 @@ Given the following board:
 The words GEEKS and QUIZ can be found by traversing the cells in the board.  Other words such as SEEK are also possible, but are not highlighted in the diagram above. Your program should be able to find these words in the board and output them in a list before the program completes.
 
 ### Notes
-Two dependencies have been provided to instances of the `Solver` class, an instance of `Board` and an instance of `Dictionary`.  You will need a couple of methods provided by these dependencies to implement your solution:
+Two dependencies have been provided to instances of the `Solver` class, an instance of `Board` and an instance of `Dictionary`.  You will need a few methods provided by these dependencies to implement your solution:
 
 * `Board#value(m_value, n_value)` will return the letter stored at the given MxN coordinates in the board.
+* `Board#width` will return the width of the board.
+* `Board#height` will return the height of the board.
 * `Dictionary#word?(word)` will return a boolean value indicating if the passed word is a valid English word.
 
 ### Bonus
