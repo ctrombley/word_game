@@ -9,7 +9,7 @@ Given the following board:
 
 ![board](https://github.com/ctrombley/word_game/raw/master/board.png)
 
-The words GEEKS and QUIZ can be found by traversing the cells in the board.  Others such as SEEK are also possible, but not highlighted in the diagram above. Your program should be able to find these words in the board and output them in a list before the program completes.
+The words GEEKS and QUIZ can be found by traversing the cells in the board.  Other words such as SEEK are also possible, but are not highlighted in the diagram above. Your program should be able to find these words in the board and output them in a list before the program completes.
 
 ### Notes
 Two dependencies have been provided to instances of the `Solver` class, an instance of `Board` and an instance of `Dictionary`.  You will need a couple of methods provided by these dependencies to implement your solution:
