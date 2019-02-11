@@ -12,7 +12,7 @@ Once the main problem has been solved, we can also consider the performance of t
 ### Example
 Given the following board:
 
-![board](https://previews.dropbox.com/p/thumb/AAUUF5lHgCEZoo6ZaEAYO6q_bo5B0IvjpzXbdU3A97RtIvbNF4zzptM8QDXt7vUdeynFjg_gYNEbexgtX8HyV8NeqzMDL5yD2uRoAZu0YYZ6-tAa6ocQDVA0g5DN6kA-_DJPUOkgmwiLKs5XCMMdZm4YFdE4QA_8Dk1DehLcLN4FVK8phSGD78l9hnUz7fQEeTmcuQ7TMLCNif9mINDNi563Ygxf5gNvfoeSadrNRSW9y2JNgYH4eqWk9xl3dmRQHUWaag_TTuyHl-q9Suuv45PToZktvg5ENbhatq-EdHAVP0IlRQXHkPM5E3xOuaIS6NcMPHbMyWkWqnINKpHWG_sD_zXyvu4e-zP3u1mzaJG-OA/p.png)
+![board](https://github.com/ctrombley/word_game/raw/master/board.png)
 
 The words GEEKS and QUIZ can be found by traversing the cells in the board.  Your program should be able to find these words in the board and output them in a list before the program completes.
 
