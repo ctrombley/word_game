@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-The+problem">The problem</a>
+    <li><a href="#label-Example">Example</a>
+    <li><a href="#label-Notes">Notes</a>
+    <li><a href="#label-Bonus">Bonus</a>
+    <li><a href="#label-Running+the+code">Running the code</a>
+    <li><a href="#label-Hints">Hints</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./README_md.html">README</a>
+  
+    <li><a href="./words.html">words</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.md">
+
+<h2 id="label-The+problem">The problem<span><a href="#label-The+problem">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Given a dictionary and a M x N board where every cell has one character,
+find all possible words that are 3 letters or larger and that can be formed
+by a sequence of adjacent characters. Starting from a single cell, we can
+move to any of up to 8 adjacent characters (even diagonally), but a word
+should not reuse a letter from the same cell twice.</p>
+
+<p>To solve this problem, you&#39;ll need to implement
+<code>Solver#solve</code> in `lib/solver.rb&#39;.</p>
+
+<h3 id="label-Example">Example<span><a href="#label-Example">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Given the following board:</p>
+
+<p><img src="https://github.com/ctrombley/word_game/raw/master/board.png"></p>
+
+<p>The words GEEKS and QUIZ can be found by traversing the cells in the board.
+Others such as SEEK are also possible, but not highlighted in the diagram
+above. Your program should be able to find these words in the board and
+output them in a list before the program completes.</p>
+
+<h3 id="label-Notes">Notes<span><a href="#label-Notes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Two dependencies have been provided to instances of the <code>Solver</code>
+class, an instance of <code>Board</code> and an instance of
+<code>Dictionary</code>. You will need a couple of methods provided by
+these dependencies to implement your solution:</p>
+<ul><li>
+<p><code>Board#value(m_value, n_value)</code> will return the letter stored at
+the given MxN coordinates in the board.</p>
+</li><li>
+<p><code>Dictionary#word?(word)</code> will return a boolean value indicating
+if the passed word is a valid English word.</p>
+</li></ul>
+
+<h3 id="label-Bonus">Bonus<span><a href="#label-Bonus">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Once the main problem has been solved, we can also consider the performance
+of the solution. One area for consideration is the provided implementation
+for dictionary lookup - it is not very fast. When calling
+<code>Dictionary#word?</code>, a <a
+href="https://www.studytonight.com/data-structures/linear-search-algorithm">linear
+search</a> is performed on an array. Implement a more efficient method for
+performing dictionary lookups, and benchmark your results.</p>
+
+<h2 id="label-Running+the+code">Running the code<span><a href="#label-Running+the+code">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre class="ruby"><span class="ruby-identifier">ruby</span> <span class="ruby-identifier">boggle</span>.<span class="ruby-identifier">rb</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-identifier">width</span> <span class="ruby-value">3</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-identifier">height</span> <span class="ruby-value">3</span>
+</pre>
+
+<p>Running the above code will generate a randomized board of specified width
+and height and then run the solution on that board. The words found will be
+output to the command line. Once the solver implementation is completed,
+this output should be a complete list of all the words found in the given
+board.</p>
+
+<h2 id="label-Hints">Hints<span><a href="#label-Hints">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p><a
+href="https://medium.com/basecs/deep-dive-through-a-graph-dfs-traversal-8177df5d0f13">Depth
+first search</a> is an effective tool for solving the problem. Once
+implemented, it can perform an exhaustive search of all of the possible
+combinations of letters. It requires recursion, which is <a
+href="https://medium.freecodecamp.org/recursion-is-not-hard-858a48830d83">not
+as scary as it sounds</a>!</p>
+
+<p>When making our dictionary lookup more performant, there are a few
+approaches that can be taken. Implementing a more eficient search method
+such as <a
+href="https://www.studytonight.com/data-structures/binary-search-algorithm">binary
+search</a> would be a good first stab at the problem. For even better
+performance, <a
+href="https://medium.com/basecs/trying-to-understand-tries-3ec6bede0014">tries</a>
+are a data structure that is worth looking into as a means of storing the
+internal representation of the dictionary.</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

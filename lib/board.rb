@@ -1,5 +1,5 @@
 ##
-# This class represents a boggle game board.
+# This class represents a game board.
 # The board is of variable width and height, and each
 # cell contains a single letter from A to Z.
 class Board

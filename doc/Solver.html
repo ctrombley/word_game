@@ -257,13 +257,23 @@
 
 7
 8
-9</pre>
+9
+10
+11
+12
+13
+14</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/solver.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_solve'>solve</span>
+  <span class='comment'># Add the valid words to this array as they are found.
+</span>  <span class='id identifier rubyid_words'>words</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Implement a solution in Solver#solve!</span><span class='tstring_end'>&#39;</span></span>
+
+  <span class='id identifier rubyid_words'>words</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -275,7 +285,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Feb  8 15:27:54 2019 by
+  Generated on Mon Feb 11 11:05:08 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.18 (ruby-2.3.4).
 </div>
